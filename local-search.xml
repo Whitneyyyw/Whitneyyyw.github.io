@@ -8,7 +8,7 @@
     <link href="/2023/10/08/setup/"/>
     <url>/2023/10/08/setup/</url>
     
-    <content type="html"><![CDATA[<p>本网站基于Hexo + GitHub搭建。</p><p>常用命令：<br>hexo clean<br>hexo g<br>hexo s<br>hexo d</p><p>常见问题：<br>如何删除已部署在gitHub pages上的文章？</p><p>网站美化：<br>主题更改——<a href="https://hexo.fluid-dev.com/docs">fluid</a></p>]]></content>
+    <content type="html"><![CDATA[<p>本网站基于Hexo + GitHub搭建。</p><p>常用命令：<br>hexo clean<br>hexo g<br>hexo s<br>hexo d</p><p>常见问题：<br>如何删除已部署在gitHub pages上的文章？</p><p>网站美化：<br>主题更改——<a href="https://hexo.fluid-dev.com/docs">Hexo Fluid</a></p>]]></content>
     
     
     
