@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://whitneyyyw.github.io/media/assets/images/Hexo-Theme-MEOW.png">
 <meta property="article:published_time" content="2026-08-04T06:57:51.000Z">
-<meta property="article:modified_time" content="2026-08-07T03:09:42.110Z">
+<meta property="article:modified_time" content="2026-08-07T05:52:00.524Z">
 <meta property="article:author" content="Whitney">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://whitneyyyw.github.io/media/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>书影音 | Whitney's Blog</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
@@ -20,22 +20,34 @@
 /* ---------- 页面描述 ---------- */
 .media-desc{text-align:center;margin-bottom:2rem;font-size:1.05rem;color:var(--font-color-light-1);letter-spacing:.5px}
 
-/* ---------- 统计卡 ---------- */
-.media-stats{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:2.2rem}
-.stat-item{text-align:center;padding:.8rem 1.3rem;background:var(--background-color-grey-light-1);border:1px solid var(--card-border-color);border-radius:16px;min-width:78px;cursor:default;transition:transform .25s ease,box-shadow .25s ease}
-.stat-item:hover{transform:translateY(-3px);box-shadow:var(--meow-card-shadow)}
-.stat-emoji{font-size:1.5rem;line-height:1.2}
-.stat-number{font-size:1.6rem;font-weight:800;color:var(--theme-color);line-height:1.2}
-.stat-label{font-size:.75rem;color:var(--font-color-light-2);margin-top:.2rem}
-
 /* ---------- 隐藏 page.pug 自动渲染的页面大标题 ---------- */
 .page-title{display:none}
 
-/* ---------- 筛选 ---------- */
-.media-filters{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-bottom:2.4rem}
-.filter-btn{padding:.42rem 1.1rem;border:1.5px solid var(--theme-color);border-radius:20px;background:transparent;color:var(--theme-color);cursor:pointer;font-size:.85rem;font-weight:600;transition:all .25s ease}
-.filter-btn:hover{background:var(--theme-color-transparent-1)}
-.filter-btn.active{background:var(--theme-color);color:var(--font-color-invert)}
+/* ---------- 第一排：全部 ---------- */
+.media-all{display:flex;justify-content:center;margin-bottom:1.3rem}
+.all-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.8rem;border:1.5px solid transparent;border-radius:24px;background:var(--theme-color);color:var(--font-color-invert);font-size:1rem;font-weight:700;cursor:pointer;box-shadow:var(--meow-card-shadow);transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease,border-color .25s ease}
+.all-btn:hover{transform:translateY(-2px);box-shadow:var(--meow-box-shadow)}
+.all-btn:not(.active){background:transparent;color:var(--theme-color);border-color:var(--theme-color);box-shadow:none}
+.all-btn .all-count{font-size:.78rem;font-weight:700;background:rgba(255,255,255,.28);border-radius:12px;padding:.02rem .5rem;line-height:1.5}
+.all-btn:not(.active) .all-count{background:var(--theme-color-transparent-1);color:var(--theme-color)}
+
+/* ---------- 第二排：类型点数（可点击筛选）---------- */
+.media-types{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.type-item{flex:0 1 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.18rem;min-width:80px;padding:.7rem .5rem;background:var(--background-color-grey-light-1);border:1.5px solid var(--card-border-color);border-radius:16px;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease,color .25s ease}
+.type-item:hover{transform:translateY(-3px);box-shadow:var(--meow-card-shadow)}
+.type-item.active{background:var(--theme-color);border-color:var(--theme-color);color:var(--font-color-invert);box-shadow:var(--meow-card-shadow)}
+.type-emoji{font-size:1.7rem;line-height:1.1}
+.type-count{font-size:1.45rem;font-weight:800;color:var(--theme-color);line-height:1.1}
+.type-item.active .type-count{color:var(--font-color-invert)}
+.type-label{font-size:.72rem;color:var(--font-color-light-2);font-weight:600}
+.type-item.active .type-label{color:var(--font-color-invert)}
+
+/* ---------- 标签云筛选 ---------- */
+.media-tagfilter{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem .65rem;margin:0 auto 2.4rem;max-width:760px;padding:1.1rem 1.3rem;background:var(--background-color-grey-transparent);border:1px solid var(--card-border-color);border-radius:20px}
+.tag-pill{display:inline-flex;align-items:center;gap:.32rem;padding:.3rem .85rem;border-radius:18px;background:var(--background-color);border:1px solid var(--card-border-color);color:var(--font-color-light-1);cursor:pointer;font-weight:600;font-size:.82rem;line-height:1.4;transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease;white-space:nowrap}
+.tag-pill:hover{color:var(--theme-color);border-color:var(--theme-color);transform:translateY(-2px)}
+.tag-pill.active{background:var(--theme-color);color:var(--font-color-invert);border-color:var(--theme-color);transform:translateY(-2px)}
+.tag-pill .tag-count{font-size:.72em;opacity:.65;font-weight:700}
 
 /* ---------- 时间线 ---------- */
 .timeline{position:relative;padding-left:46px}
@@ -65,8 +77,8 @@
 
 /* ---------- 自定义标签 ---------- */
 .card-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.5rem}
-.custom-tag{padding:.12rem .55rem;border-radius:10px;font-size:.7rem;font-weight:600;background:var(--background-color-grey-light-1);color:var(--font-color-light-1);border:1px solid var(--card-border-color);transition:background .2s ease}
-.custom-tag:hover{background:var(--theme-color-transparent-1);color:var(--theme-color-dark-1)}
+.custom-tag{padding:.12rem .55rem;border-radius:10px;font-size:.7rem;font-weight:600;background:var(--background-color-grey-light-1);color:var(--font-color-light-1);border:1px solid var(--card-border-color);transition:background .2s ease,color .2s ease,border-color .2s ease;cursor:pointer}
+.custom-tag:hover{background:var(--theme-color-transparent-1);color:var(--theme-color-dark-1);border-color:var(--theme-color)}
 
 /* ---------- 内容区 ---------- */
 .card-body{border-top:1px solid var(--card-border-color);padding-top:1rem}
@@ -125,8 +137,11 @@ body[data-mode='dark'] .lightbox{background:rgba(0,0,0,.94)}
   .media-card{padding:1.2rem}
   .photo-thumb{width:110px;height:80px}
   .photos-single .photo-single{max-height:240px}
-  .media-stats{gap:.6rem}
-  .stat-item{padding:.65rem .9rem;min-width:66px}
+  .media-types{gap:.45rem}
+  .type-item{min-width:62px;padding:.55rem .35rem}
+  .type-emoji{font-size:1.4rem}
+  .type-count{font-size:1.2rem}
+  .media-tagfilter{padding:.85rem 1rem;gap:.4rem .5rem}
 }
 /* ---------- 评论区 ---------- */
 .media-comment{max-width:720px;margin:2.5rem auto 0;padding:0 1rem}
@@ -137,17 +152,14 @@ body[data-mode='dark'] .lightbox{background:rgba(0,0,0,.94)}
   <!-- 页面描述 -->
   <p class="media-desc">用生活所感去读书，用读书所得去生活</p>
 
-  <!-- 统计（JS 自动计算）-->
-  <div class="media-stats" id="mediaStats"></div>
+  <!-- 第一排：全部 -->
+  <div class="media-all" id="mediaAll"></div>
 
-  <!-- 筛选 -->
-  <div class="media-filters" id="mediaFilters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="book">📖</button>
-    <button class="filter-btn" data-filter="movie">🎬</button>
-    <button class="filter-btn" data-filter="music">🎵</button>
-    <button class="filter-btn" data-filter="drama">📺</button>
-  </div>
+  <!-- 第二排：类型点数（可点击筛选）-->
+  <div class="media-types" id="mediaTypes"></div>
+
+  <!-- 第三排：标签筛选（标签云，点击即筛选）-->
+  <div class="media-tagfilter" id="mediaTagFilter"></div>
 
   <!-- 时间线（JS 渲染）-->
   <div class="timeline" id="mediaTimeline"></div>
@@ -169,6 +181,9 @@ const TYPE_CONFIG = {
   drama: { label:'电视剧', tagClass:'tag-drama', gradient:'linear-gradient(145deg,#f5c898,#d4894a)', emoji:'📺' }
 };
 
+/* 当前筛选状态（类型 + 标签，二者取「且」） */
+var currentType='all', currentTag=null;
+
 /* ---------- 工具函数 ---------- */
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function stars(r){var f=Math.round(Number(r)||0);return '★'.repeat(f)+'☆'.repeat(5-f);}
@@ -176,19 +191,28 @@ function fmtDate(d){var x=new Date(d.replace(/-/g,'/'));return x.getFullYear()+'
 // 换行支持：先转义再 \n → <br>
 function fmtText(s){return esc(String(s||'')).replace(/\n/g,'<br>');}
 
-/* ---------- 统计 ---------- */
-function renderStats(){
+/* ---------- 全部 + 类型点数 ---------- */
+function typeCounts(){
   var types=['book','movie','music','drama'];
-  var counts={};types.forEach(function(t){counts[t]=0;});
-  MEDIA_DATA.forEach(function(r){if(typeof counts[r.type]==='number')counts[r.type]++;});
-  var items=[
-    {emoji:'📖',num:counts.book,label:'书籍'},
-    {emoji:'🎬',num:counts.movie,label:'电影'},
-    {emoji:'🎵',num:counts.music,label:'音乐'},
-    {emoji:'📺',num:counts.drama,label:'电视剧'}
-  ];
-  document.getElementById('mediaStats').innerHTML=items.map(function(i){
-    return '<div class="stat-item"><div class="stat-emoji">'+i.emoji+'</div><div class="stat-number">'+i.num+'</div><div class="stat-label">'+i.label+'</div></div>';
+  var c={};types.forEach(function(t){c[t]=0;});
+  MEDIA_DATA.forEach(function(r){if(typeof c[r.type]==='number')c[r.type]++;});
+  return c;
+}
+function renderAll(){
+  var total=MEDIA_DATA.length;
+  document.getElementById('mediaAll').innerHTML=
+    '<button class="all-btn" id="allBtn" data-filter="all">ALL <span class="all-count">'+total+'</span></button>';
+}
+function renderTypes(){
+  var c=typeCounts();
+  var order=['book','movie','music','drama'];
+  document.getElementById('mediaTypes').innerHTML=order.map(function(t){
+    var cfg=TYPE_CONFIG[t];
+    return '<button class="type-item" data-filter="'+t+'">'
+      +'<span class="type-emoji">'+cfg.emoji+'</span>'
+      +'<span class="type-count">'+c[t]+'</span>'
+      +'<span class="type-label">'+cfg.label+'</span>'
+      +'</button>';
   }).join('');
 }
 
@@ -218,7 +242,7 @@ function renderLinks(links){
 /* ---------- 标签区 HTML ---------- */
 function renderTags(tags){
   if(!tags||!tags.length)return'';
-  var chips=tags.map(function(t){return '<span class="custom-tag">#'+esc(t)+'</span>';}).join('');
+  var chips=tags.map(function(t){return '<span class="custom-tag" data-tag="'+esc(t)+'" role="button" tabindex="0">#'+esc(t)+'</span>';}).join('');
   return '<div class="card-tags">'+chips+'</div>';
 }
 
@@ -254,8 +278,12 @@ function renderCard(r){
 }
 
 /* ---------- 渲染时间线 ---------- */
-function renderCards(filter){
-  var list=filter==='all'?MEDIA_DATA:MEDIA_DATA.filter(function(r){return r.type===filter;});
+function renderCards(){
+  var list=MEDIA_DATA.filter(function(r){
+    var okType = currentType==='all' || r.type===currentType;
+    var okTag  = !currentTag || (r.tags||[]).indexOf(currentTag)>=0;
+    return okType && okTag;
+  });
   var sorted=list.slice().sort(function(a,b){return new Date(b.date.replace(/-/g,'/'))-new Date(a.date.replace(/-/g,'/'));});
   var wrap=document.getElementById('mediaTimeline');
   if(!sorted.length){wrap.innerHTML='<div class="media-empty">这里还空空如也～</div>';return;}
@@ -290,21 +318,67 @@ function renderCards(filter){
   document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
 })();
 
-/* ---------- 筛选 ---------- */
-(function(){
-  var btns=document.querySelectorAll('#mediaFilters .filter-btn');
-  btns.forEach(function(btn){
-    btn.addEventListener('click',function(){
-      btns.forEach(function(b){b.classList.remove('active');});
-      btn.classList.add('active');
-      renderCards(btn.dataset.filter);
-    });
+/* ---------- 标签云 ---------- */
+function collectTags(){
+  var map={};
+  MEDIA_DATA.forEach(function(r){(r.tags||[]).forEach(function(t){map[t]=(map[t]||0)+1;});});
+  return Object.keys(map).map(function(t){return {name:t,count:map[t]};}).sort(function(a,b){return b.count-a.count;});
+}
+function renderTagFilter(){
+  var box=document.getElementById('mediaTagFilter');
+  var tags=collectTags();
+  if(!tags.length){box.style.display='none';return;}
+  box.style.display='flex';
+  box.innerHTML=tags.map(function(t){
+    var active = currentTag===t.name ? ' active':'';
+    return '<button class="tag-pill'+active+'" data-tag="'+esc(t.name)+'">#'+esc(t.name)+'<span class="tag-count">'+t.count+'</span></button>';
+  }).join('');
+}
+function updateTypeActive(){
+  var allBtn=document.getElementById('allBtn');
+  if(allBtn)allBtn.classList.toggle('active', currentType==='all');
+  document.querySelectorAll('#mediaTypes .type-item').forEach(function(b){
+    b.classList.toggle('active', b.dataset.filter===currentType);
   });
-})();
+}
+function applyFilter(){
+  updateTypeActive();
+  renderTagFilter();
+  renderCards();
+}
+
+/* ---------- 全部 + 类型筛选 ---------- */
+document.getElementById('mediaAll').addEventListener('click',function(e){
+  if(!e.target.closest('#allBtn'))return;
+  currentType='all'; currentTag=null;   // 「全部」重置所有筛选
+  applyFilter();
+});
+document.getElementById('mediaTypes').addEventListener('click',function(e){
+  var it=e.target.closest('.type-item'); if(!it)return;
+  currentType=it.dataset.filter;
+  applyFilter();
+});
+
+/* ---------- 标签筛选：点击标签云，或点击卡片内的标签 ---------- */
+document.getElementById('mediaTagFilter').addEventListener('click',function(e){
+  var pill=e.target.closest('.tag-pill'); if(!pill)return;
+  var t=pill.dataset.tag;
+  currentTag = (currentTag===t) ? null : t;   // 再点一次取消
+  applyFilter();
+});
+document.getElementById('mediaTimeline').addEventListener('click',function(e){
+  var chip=e.target.closest('.custom-tag'); if(!chip)return;
+  var t=chip.getAttribute('data-tag'); if(!t)return;
+  currentTag = (currentTag===t) ? null : t;
+  applyFilter();
+  document.getElementById('mediaTagFilter').scrollIntoView({behavior:'smooth',block:'center'});
+});
 
 /* ---------- 启动 ---------- */
-renderStats();
-renderCards('all');
+renderAll();
+renderTypes();
+renderTagFilter();
+renderCards();
 </script>
 
 
