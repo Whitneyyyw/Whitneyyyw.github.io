@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://whitneyyyw.github.io/media/assets/images/Hexo-Theme-MEOW.png">
 <meta property="article:published_time" content="2026-08-04T06:57:51.000Z">
-<meta property="article:modified_time" content="2026-08-07T03:05:00.673Z">
+<meta property="article:modified_time" content="2026-08-07T03:09:42.110Z">
 <meta property="article:author" content="Whitney">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://whitneyyyw.github.io/media/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>书影音 | Whitney's Blog</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
@@ -75,6 +75,7 @@
 .section-heading{font-size:.82rem;font-weight:700;color:var(--theme-color);margin-bottom:.45rem}
 .section-text{font-size:.92rem;line-height:1.75;color:var(--font-color);padding:.5rem .85rem;background:var(--background-color-grey-transparent);border-left:3px solid var(--theme-color);border-radius:0 8px 8px 0}
 .section-text.quote{position:relative;padding-top:.65rem}
+.section-text.quote+.section-text.quote{margin-top:.6rem}
 .section-text.quote::before{content:'\201C';position:absolute;left:.15rem;top:-.45rem;font-size:1.8rem;color:var(--theme-color);opacity:.4;font-family:Georgia,serif;line-height:1}
 
 /* ---------- 照片画廊 ---------- */
@@ -158,120 +159,8 @@ body[data-mode='dark'] .lightbox{background:rgba(0,0,0,.94)}
   </div>
 </div>
 
+<script src="/media/media-data.js"></script>
 <script>
-/* ============================================================
- *  书影音记录 —— 在 MEDIA_DATA 数组末尾加一条即可
- *  复制下面模板 → 改内容（date 越大越靠前）：
- *
- *  {
- *    type: 'book',              // 必填：book / movie / music / drama
- *    date: '2026-08-01',        // 必填：YYYY-MM-DD
- *    title: '标题',
- *    author: '作者',
- *    rating: 5.0,               // 0~5 分
- *    intro: '作品简介……',
- *    thought: '感悟……',
- *    quote: '摘录……',           // 可选，留空 '' 不显示
- *    tags: [],                 // 可选，如 ['科幻','中国文学']
- *    photos: [],                // 可选，如 ['/images/media/xxx.jpg']
- *    links: [],                 // 可选，如 [{label:'采访',url:'https://...'}]
- *    // 换行：在 intro / thought / quote 中用 \n 即可换行
- *    // cover: 'linear-gradient(145deg,#xxx,#yyy)'  // 可选，自定义封面渐变
- *  },
- * ============================================================ */
-const MEDIA_DATA = [
-  {
-    type: 'drama', date: '2026-05-05',
-    title: '她和她的猫 彼女と彼女の猫 -Everything Flows- (2016)', author: '坂本一也', rating: 4.5,
-    intro: '本动画片以一只公猫的视角，讲述了“他”与女主人在同一个屋檐下所过的略带感伤的淡然日子。\n很久之前的某天，“他”被美丽温柔的女孩捡回家，开始了自认幸福无比的生活。女孩孤身一人，做着一份“他”不知也不介意为何的工作，“他”在意的是女孩很早出门时的那副面庞、身上的那缕清香、问候“他”时的那声淡语以及爱抚“他”时的那份轻柔……以致后来，一只名叫“咪咪”的猫咪向“他”表白爱意时，“他”婉言拒绝——“他”早已被女孩深深征服。然而，一个个季节逝去，“他”终究无法抚慰她寂寞的心灵。 ©豆瓣\n由新海诚原作的短片原创动画《她和她的猫》，宣布改编成TV动画，剧中的“她”将由花泽香菜担任声优，而黑猫的声优将由浅沼晋太郎担任，矢作纱友里将为“她”的友人配音。本作的导演由坂本一也担任，剧本为永川成基，人设·总作画监督将由参与制作过《黑色子弹》的海岛千本担任，制作则交给了liDENFILMS京都工作室。',
-    thought: '每一集都非常短，有种宁静的忧伤，致郁又治愈，想养一只猫。想起了蔡崇达《我的动物朋友们》，还有李娟的散文中妈妈养的各种鸡啊狗啊猫啊，好奇和其他动物建立情感是什么样的体验。',
-    photos: [
-      '/images/她和她的猫/1.png',
-      '/images/她和她的猫/2.png',
-      '/images/她和她的猫/3.png',
-      '/images/她和她的猫/4.png',
-    ],
-    links: [
-      {label:'B站链接',url:'https://www.bilibili.com/bangumi/play/ep84722/?share_source=copy_web'}
-    ],
-    tags: ['治愈','动画','猫','新海诚']
-  },
-  {
-    type: 'movie', date: '2026-04-14',
-    title: '过春天(2018)', author: '白雪', rating: 4.0,
-    intro: '单亲家庭出身的16岁女学生佩佩（黄尧 饰），她的城市既是香港、也是深圳，白天在香港上学，晚上回到深圳跟妈妈（倪虹洁 饰）住在一起，频繁地穿梭于两地。为了和闺蜜Joe（汤加文 饰）一起旅行的约定，为了自己的存在感，为了对Joe男友阿豪（孙阳 饰）懵懂的好感，她内心的冲动被点燃，“水客”成为了她的另一个身份，一段颇有“冒险”感的青春故事就此开始。 ©豆瓣',
-    thought: '原来过春天是顺利过关，很浪漫的表达。青春期的少女心事是破碎的家庭、贫穷、友谊和心动。刚看完非常向往在太平山顶看香港夜景，当时也没想到在26年7月16日借着去珠澳港考察的机会、并且当天是在同批队友的提醒下和同行朋友一拍即合阴差阳错即刻坐小巴上到了太平山顶，夜景很美，是我7月份最激动的时刻。',
-    quote: '',
-    photos: [
-      '/images/过春天/0.jpg',
-      '/images/过春天/0.png',
-      '/images/过春天/1.png',
-      '/images/过春天/2.png',
-      '/images/过春天/3.png',
-      '/images/过春天/4.png',
-      '/images/过春天/5.png',
-      '/images/过春天/6.png',
-    ],
-    links: []
-  },
-  {
-    type: 'drama', date: '2026-04-13',
-    title: '唐顿庄园 Downton Abbey 六季剧集三部电影', author: '', rating: 4.8,
-    intro: '《唐顿庄园》（Downton Abbey）是由英国ITV电视台出品，由布莱恩·珀西瓦尔、詹姆斯·斯特朗联合执导，朱利安·费罗斯编剧，休·邦尼维尔、伊丽莎白·麦戈文、玛吉·史密斯、丹·史蒂文斯、米歇尔·道克瑞等领衔主演的时代迷你剧。该剧共分为六季播出，共51集。\n背景设定在1910年代英王乔治五世在位时约克郡一个虚构的庄园——“唐顿庄园”，故事开始于格兰瑟姆伯爵一家由家产继承问题而引发的种种纠葛，呈现了英国上层贵族与其仆人们在森严的等级制度下的人间百态。\n该剧第一季于2010年9月26日首播，共7集；第二季于2011年9月18日首播，共8集，加一集圣诞特辑；第三季于2012年9月16日首播，共8集，加一集圣诞特辑；第四季于2013年9月22日首播，共8集，加一集圣诞特辑。第五季于2014年9月21日首播，共九集。第六季于2015年9月20日首播，共8集。央视八套2013年播出前两季，2014年播出第三季。2012年，该剧获英国国家电视奖最佳剧情奖和上海电视节海外电视特别奖金奖。2015年，该剧获第67届艾美奖剧情类最佳剧集提名。 @百度百科',
-    thought: '“英国版红楼梦“。连续剧演员罢演强行写死确实难受，中间很多时候都是咬着牙攥着拳看完的。好喜欢奶奶，非常有智慧、有个性、有魅力的角色。英伦风还是太有吸引力了，希望这辈子有机会去取景地打卡。',
-    quote: 'Long live Downton Abbey',
-    photos: [
-      '/images/Downton Abbey/1.png',
-      '/images/Downton Abbey/2.png',
-      '/images/Downton Abbey/3.png',
-      '/images/Downton Abbey/4.png',
-      '/images/Downton Abbey/5.png',
-      '/images/Downton Abbey/6.png',
-      '/images/Downton Abbey/7.png',
-      '/images/Downton Abbey/8.png',
-      '/images/Downton Abbey/9.png',
-      '/images/Downton Abbey/10.png',
-      '/images/Downton Abbey/11.png',
-      '/images/Downton Abbey/12.png',
-      '/images/Downton Abbey/13.png',
-    ],
-    links: [],
-    tags:['英国','家庭']
-  },
-  {
-    type: 'movie', date: '2026-07-12',
-    title: '寄生虫 기생충 (2019)', author: '奉俊昊', rating: 4.8,
-    intro: '基宇（崔宇植 饰）出生在一个贫穷的家庭之中，和妹妹基婷（朴素丹 饰）以及父母在狭窄的地下室里过着相依为命的日子。一天，基宇的同学上门拜访，他告诉基宇，自己在一个有钱人家里给他们的女儿做家教，太太是一个头脑简单出手又阔绰的女人，因为自己要出国留学，所以将家教的职位暂时转交给基宇。\n就这样，基宇来到了朴社长（李善均 饰）家中，并且见到了他的太太（赵汝贞 饰），没过多久，基宇的妹妹和父母也如同寄生虫一般的进入了朴社长家里工作。然而，他们的野心并没有止步于此，基宇更是和大小姐坠入了爱河。随着时间的推移，朴社长家里隐藏的秘密渐渐浮出了水面。 ©豆瓣',
-    thought: '非常精彩，回味无穷。除了前期的铺垫，矛盾的集中爆发就在一晚上+一白天，把穷人和穷人、穷人和富人之间的对峙以戏谑又悲剧的方式呈现出来，张力十足。气味、寄生虫这两个线索太厉害了，贯穿全片，看了B站的一些拉片解析发现镜头语言也很绝。',
-    quote: '',
-    photos: [],
-    links: []
-  },
-  {
-    type: 'movie', date: '2026-08-01',
-    title: '看不见的客人 Contratiempo (2016)', author: '奥里奥尔·保罗', rating: 4.8,
-    intro: '艾德里安（马里奥·卡萨斯 Mario Casas 饰）经营着一间科技公司，事业蒸蒸日上，家中有美丽贤惠的妻子和活泼可爱的女儿，事业家庭双丰收的他是旁人羡慕的对象。然而，野心勃勃的艾德里安并未珍惜眼前来之不易的生活，一直以来，他和一位名叫劳拉（芭芭拉·蓝妮 Bárbara Lennie 饰）的女摄影师保持着肉体关系。\n某日幽会过后，两人驱车离开别墅，却在路上发生了车祸，为了掩盖事件的真相，两人决定将在车祸中死去的青年丹尼尔联同他的车一起沉入湖底。之后，劳拉遇见了一位善良的老人，老人将劳拉坏掉的车拉回家中修理，然而，令劳拉没有想到的是，这位老人，竟然就是丹尼尔的父亲。 ©豆瓣',
-    thought: '第一次看是在初中，好像是一个人在家看的，完全跟着律师和男主的视角来回切换和横跳，最后看到反转之处非常震撼。这一次二刷虽然具体情节有点忘记，但是记得男主是真正凶手、撒谎成精，律师是受害者母亲，所以关注点放在了细节的铺垫，比如受害者父母在剧团认识、家里的人皮道具等等伏笔，还有律师是怎么一步步设套逼问出男主真相的，比如先谎称控方有了新证人、证人是案发现场路过的司机、关掉了男主手机、用AI合成照片先解释密室杀人事件取得男主信任又说明是假照片逼问出男孩被抛尸的地点，代入这个母亲真的觉得很厉害也很绝望，尤其是人渣男主说沉车前发现男孩没死，结果还是把车推进了湖里，那一刻的暴怒是一对丧子之母发现真相却还要拿到证据压抑之下的真情流露。非常精彩的对峙，纯靠几个小时在房间的推演就呈现出完整的故事，谎言、圈套、人性，反转再反转背后的真相令人唏嘘。',
-    quote: '',
-    photos: [],
-    links: [],
-    tags: ['悬疑', '西班牙']
-  },
-  {
-    type: 'book', date: '2026-07-29',
-    title: '红手指', author: '[日]东野圭吾', rating: 4.0,
-    intro: '《红手指》敏锐描绘了养老和家庭矛盾等每个家庭都会遇到的问题，讲述了在愚蠢而浅薄的犯罪背后，隐藏的震撼人心的真相。\n内容简介：这家人看上去再平常不过：前原和妻子人到中年，上有痴呆的老母亲，下有未成年的儿子。\n平静在一个下午被彻底打破：儿子在家中杀了一个小女孩。前原夫妇决心移走尸体，掩盖罪行。\n前原的供述合情合理，无懈可击，警方完全可以结案，但刑警加贺看到前原的母亲涂红的手指时，明白了事实真相。 ©微信读书',
-    thought: '东野圭吾先生去世后翻看其著作中我还没有读过的作品，因为这本书提到养老问题感兴趣便看了下去。书中到最后揭示了加贺恭一郎和加贺隆正的约定——加贺恭一郎的母亲在外地孤单去世，加贺隆正心有愧疚，所以想让自己也孤单去世，于是加贺恭一郎和父亲一直保持疏离，父亲去世前也只是在门外看着。这对应了前原昭夫的母亲装傻、用口红涂手指头，一方面是创造自己的世界抵御儿子儿媳的冷漠，也是用模仿的方式怀念着已故的阿尔兹海默症丈夫。罪犯前原昭夫的儿子真是变态，经历过校园暴力、没有人际支撑导致心理扭曲固然正常，但是根源在骄纵的母亲和缺位的父亲，一对父母的失职为另一对父母造成了巨大伤害。东野对变态的刻画很生动，隔着文字我都能想象前原昭夫儿子猥琐的样子，像《好东西》里面侵犯许可妈妈的富人家小儿子。前原昭夫和八重子的人物形象其实挺扁平的，就是人设很固定，一个是只爱儿子、不敬老人，另一个是只爱自己、家庭缺位，反而是老人的形象相对丰富一点。但是我觉得老人一定不要看这本书，太心酸了，这样温暖的女儿也弥补不了如此冷漠的儿子带来的伤害。',
-    quote: [
-      '前原先生，你认真看过你母亲的眼睛吗？',
-      '加贺没有肯定。“我不知道有没有明确的意愿，大概她本人也不知道吧，就和穿妻子衣服的老先生一样。假装痴呆，并不能理解痴呆老人的心理，也许只是从另一个方面回顾自己是怎么照顾痴呆老人的。必须记住的是，越是老年人，或者说正因为是老年人，内心常常会有不可平复的伤痕。治疗的方法有许多，周围的人不能理解。所以我觉得，重要的不是理解，而是尊重。”',
-      ]
-    photos: ['/images/红手指/1.jpg',],
-    links: [],
-    tags: ['悬疑', '家庭', '养老']
-  },
-];
-
 /* ---------- 类型配置 ---------- */
 const TYPE_CONFIG = {
   book:  { label:'书籍',   tagClass:'tag-book',  gradient:'linear-gradient(145deg,#a8d0f0,#4a90b8)', emoji:'📖' },
@@ -350,7 +239,11 @@ function renderCard(r){
   var bodyParts=[];
   if(r.intro)  bodyParts.push('<div class="card-section"><div class="section-heading">作品简介</div><div class="section-text">'+fmtText(r.intro)+'</div></div>');
   if(r.thought)bodyParts.push('<div class="card-section"><div class="section-heading">感悟</div><div class="section-text">'+fmtText(r.thought)+'</div></div>');
-  if(r.quote)  bodyParts.push('<div class="card-section"><div class="section-heading">摘录</div><div class="section-text quote">'+fmtText(r.quote)+'</div></div>');
+  if(r.quote){
+    var qs=Array.isArray(r.quote)?r.quote:[r.quote];
+    var quoteHtml=qs.map(function(q){return '<div class="section-text quote">'+fmtText(q)+'</div>';}).join('');
+    bodyParts.push('<div class="card-section"><div class="section-heading">摘录</div>'+quoteHtml+'</div>');
+  }
   if(bodyParts.length)parts.push('<div class="card-body">'+bodyParts.join('')+'</div>');
 
   // 照片 + 链接
