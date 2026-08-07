@@ -155,6 +155,6 @@ const MEDIA_DATA = [
       {label:'小宇宙音频：359-我的诺兰采访为啥在西方连夜火遍全网',url:'https://www.xiaoyuzhoufm.com/episode/6a6ed39d1b5e24969ce78480'},
       {}
     ],
-    tags: ['治愈','动画','猫','新海诚']
+    tags: ['采访']
   },
 ];
