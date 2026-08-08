@@ -153,6 +153,7 @@ const MEDIA_DATA = [
       {label:'B站视频：仲树对话诺兰《奥德赛》震撼发布！',url:'https://www.bilibili.com/video/BV1vdGK6GEQE/?share_source=copy_web&vd_source=82ce7e55fef14768cd13c503d7b5bcf2'},
       {label:'小宇宙音频：采访诺兰：你是西方文明黄昏时代的吟游诗人吗？',url:'https://www.xiaoyuzhoufm.com/episode/6a6c4be756a3f3491ba7f8af'},
       {label:'小宇宙音频：359-我的诺兰采访为啥在西方连夜火遍全网',url:'https://www.xiaoyuzhoufm.com/episode/6a6ed39d1b5e24969ce78480'},
+      {label:'新周刊采访：采访诺兰火遍外网后，她说自己随时准备退网｜专访仲树',url:'https://mp.weixin.qq.com/s/dmVm4TmaGUyGilbnBGk-gw'},
     ],
     tags: ['访谈']
   },
